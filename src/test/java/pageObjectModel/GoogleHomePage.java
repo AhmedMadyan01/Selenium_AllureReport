@@ -21,7 +21,6 @@ public class GoogleHomePage {
     /**
      * Methods
      */
-    @Test
     public static void navigateToGoogleHomePage() {
         WebDriverManager.chromedriver().setup();
         chromeDriver = new ChromeDriver();
