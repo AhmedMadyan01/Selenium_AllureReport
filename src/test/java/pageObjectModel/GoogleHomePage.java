@@ -2,8 +2,10 @@ package pageObjectModel;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class GoogleHomePage {
     /**
@@ -11,17 +13,20 @@ public class GoogleHomePage {
      */
     private static final By google_logo = By.className("lnXdpd");
 
-    static ChromeDriver chromeDriver = new ChromeDriver();
 
     private static final String google_URL = ("https://www.google.com/");
 
+    private static WebDriver chromeDriver;
 
     /**
      * Methods
      */
+    @Test
     public static void navigateToGoogleHomePage() {
         WebDriverManager.chromedriver().setup();
-        chromeDriver.get(google_URL);
+        chromeDriver = new ChromeDriver();
+        chromeDriver.navigate().to(google_URL);
+        chromeDriver.manage().window().maximize();
     }
 
     public static void validateThatUserRedirectedSuccessfully() {
