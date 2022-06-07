@@ -25,6 +25,9 @@
         <cucumber-picocontainer.version>${cucumber.version}</cucumber-picocontainer.version>
         <cucumber-testng.version>${cucumber.version}</cucumber-testng.version>
         <cucumber-gherkin.version>${cucumber.version}</cucumber-gherkin.version>
+        <slf4j.version>1.7.36</slf4j.version>
+        <slf4j-api.version>${slf4j.version}</slf4j-api.version>
+        <slf4j-simple.version>${slf4j.version}</slf4j-simple.version>
         <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
     </properties>
 
@@ -68,6 +71,16 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-gherkin</artifactId>
             <version>${cucumber-gherkin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j-simple.version}</version>
         </dependency>
     </dependencies>
 
