@@ -28,6 +28,9 @@
         <slf4j.version>1.7.36</slf4j.version>
         <slf4j-api.version>${slf4j.version}</slf4j-api.version>
         <slf4j-simple.version>${slf4j.version}</slf4j-simple.version>
+        <allure.version>2.18.1</allure.version>
+        <allure-cucumber7-jvm.version>${allure.version}</allure-cucumber7-jvm.version>
+        <allure-testng.version>${allure.version}</allure-testng.version>
         <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
     </properties>
 
@@ -81,6 +84,16 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j-simple.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>${allure-cucumber7-jvm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure-testng.version}</version>
         </dependency>
     </dependencies>
 
