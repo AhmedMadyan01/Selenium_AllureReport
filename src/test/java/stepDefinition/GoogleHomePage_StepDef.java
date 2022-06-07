@@ -13,7 +13,7 @@ public class GoogleHomePage_StepDef {
 
     @When("User successfully navigated")
     public void userSuccessfullyNavigated() {
-
+        GoogleHomePage.validateThatUserRedirectedSuccessfully();
     }
     @Then("User should see google logo icon displayed")
     public void userShouldSeeGoogleLogoIconDisplayed() {
