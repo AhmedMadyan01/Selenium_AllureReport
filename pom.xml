@@ -9,52 +9,82 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <!-- Maven project build configurations -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
+        <!-- Maven surface plugin configurations -->
+        <surefire.suiteXmlFiles>testng.xml</surefire.suiteXmlFiles>
+        <!-- Dependencies and plugins versions -->
+        <testNG.version>7.6.0</testNG.version>
+        <selenium-java.version>4.2.1</selenium-java.version>
+        <webdrivermanager.version>5.2.0</webdrivermanager.version>
+        <cucumber.version>7.3.4</cucumber.version>
+        <cucumber-java.version>${cucumber.version}</cucumber-java.version>
+        <cucumber-core.version>${cucumber.version}</cucumber-core.version>
+        <cucumber-picocontainer.version>${cucumber.version}</cucumber-picocontainer.version>
+        <cucumber-testng.version>${cucumber.version}</cucumber-testng.version>
+        <cucumber-gherkin.version>${cucumber.version}</cucumber-gherkin.version>
+        <maven-surefire-plugin.version>3.0.0-M6</maven-surefire-plugin.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.2.1</version>
+            <version>${selenium-java.version}</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.6.0</version>
-            <scope>test</scope>
+            <version>${testNG.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.2.0</version>
+            <version>${webdrivermanager.version}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.3.4</version>
+            <version>${cucumber-java.version}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-core</artifactId>
-            <version>7.3.4</version>
+            <version>${cucumber-core.version}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
-            <version>7.3.4</version>
-            <scope>test</scope>
+            <version>${cucumber-picocontainer.version}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
-            <version>7.3.4</version>
+            <version>${cucumber-testng.version}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-gherkin</artifactId>
-            <version>7.3.4</version>
+            <version>${cucumber-gherkin.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>${surefire.suiteXmlFiles}</suiteXmlFile>
+                        </suiteXmlFiles>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
