@@ -18,13 +18,5 @@ import java.io.InputStreamReader;
 )
 
 public class TestRunner extends TestBase {
-    @BeforeSuite
-    public void deleteOutDatedAllureReport() throws IOException {
-        CMD.executeCommandLine("rmdir /Q /S allure-results");
-    }
 
-    @AfterSuite
-    public void generateAllureReport() throws IOException {
-        CMD.executeCommandLine("allure serve allure-results");
-    }
 }
