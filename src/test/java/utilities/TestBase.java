@@ -32,8 +32,8 @@ public class TestBase extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
     public void deleteOutDatedAllureReport() throws IOException {
-        CMD.executeCommandLine("cd allure-results");
-        CMD.executeCommandLine("DEL /S /Q *.json");
+        CLI.executeCommandLine("cd allure-results");
+        CLI.executeCommandLine("DEL /S /Q *.json");
 //        CMD.executeCommandLine("rmdir /Q /S allure-results");
 //        CMD.executeCommandLine("mkdir allure-results");
 //        CMD.executeCommandLine("copy environment.properties allure-results");
@@ -41,6 +41,6 @@ public class TestBase extends AbstractTestNGCucumberTests {
 
     @AfterSuite
     public void generateAllureReport() throws IOException {
-        CMD.executeCommandLine("allure serve allure-results");
+        CLI.executeCommandLine("allure serve allure-results");
     }
 }
