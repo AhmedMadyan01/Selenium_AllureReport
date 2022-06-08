@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CMD {
+public class CLI {
     public static void executeCommandLine(String command) throws IOException {
         ProcessBuilder builder = new ProcessBuilder(
                 "cmd.exe", "/c", command);
