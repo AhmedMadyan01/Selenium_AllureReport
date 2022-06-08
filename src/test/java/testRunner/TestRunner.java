@@ -8,7 +8,7 @@ import utilities.TestBase;
                 publish = true,
                 features = {"src/test/java/feature"},
                 glue = {"stepDefinition"},
-                tags = ("@GoogleTest"),
+                tags = ("@Sanity"),
                 plugin = {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
         )
 
