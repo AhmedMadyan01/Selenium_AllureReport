@@ -9,6 +9,8 @@ public class GoogleHomePage {
      * Locators, and Variables
      */
     private static final By google_logo = By.className("lnXdpd");
+    private static final By google_SearchBar = By.name("q");
+    private static final By google_SearchButton = By.name("btnK");
 
     private static final String google_URL = ("https://www.google.com/");
 
@@ -26,5 +28,18 @@ public class GoogleHomePage {
 
     public static void validateThatGoogleLogoIconExists() {
         Assert.assertTrue(TestBase.getDriver().findElement(google_logo).isDisplayed());
+    }
+
+    public static void validateThatGoogleSearchBarExists() {
+        Assert.assertTrue(TestBase.getDriver().findElement(google_SearchBar).isDisplayed());
+    }
+
+    public static void validateThatGoogleSearchButtonsDisplayed() {
+        Assert.assertTrue(TestBase.getDriver().findElement(google_SearchBar).isDisplayed());
+        Assert.assertTrue(TestBase.getDriver().findElement(google_SearchBar).isEnabled());
+    }
+
+    public static void validateThatGoogleSearchButtonClickable() {
+        Assert.assertTrue(TestBase.getDriver().findElement(google_SearchBar).isEnabled());
     }
 }
