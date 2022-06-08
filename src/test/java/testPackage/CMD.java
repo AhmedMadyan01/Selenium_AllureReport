@@ -13,6 +13,13 @@ public class CMD {
         BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
         String line;
         line = r.readLine();
-        System.out.println(line);
+        while (line != null) {
+            line = r.readLine();
+            if (line.contains("Press <Ctrl+C> to exit")) {
+                System.out.println(line);
+                break;
+            }
+            System.out.println(line);
+        }
     }
 }
