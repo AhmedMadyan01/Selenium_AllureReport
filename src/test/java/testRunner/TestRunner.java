@@ -1,15 +1,7 @@
 package testRunner;
 
-import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import testPackage.CMD;
-import testPackage.TestBase;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import utilities.TestBase;
 
 @CucumberOptions(features = {"src/test/java/feature"}
         , glue = {"stepDefinition"}
