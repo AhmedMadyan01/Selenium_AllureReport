@@ -15,7 +15,7 @@ public class TestBase extends AbstractTestNGCucumberTests {
     private static WebDriver webDriver;
 
     @BeforeMethod
-    public static void setUpDriver() {
+    public void setUpDriver() {
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
     }
@@ -26,7 +26,7 @@ public class TestBase extends AbstractTestNGCucumberTests {
     }
 
     @AfterMethod
-    public static void tearDownDriver() {
+    public void tearDownDriver() {
         webDriver.quit();
     }
 
