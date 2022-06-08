@@ -12,14 +12,7 @@ public class CMD {
         Process p = builder.start();
         BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
         String line;
-        while (true) {
-            line = r.readLine();
-            if (line == null) {
-                break;
-            }
-            System.out.println(line);
-
-        }
-        p.destroy();
+        line = r.readLine();
+        System.out.println(line);
     }
 }
