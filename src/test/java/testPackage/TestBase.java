@@ -14,7 +14,7 @@ import java.io.IOException;
 public class TestBase extends AbstractTestNGCucumberTests {
     private static WebDriver webDriver;
 
-    @BeforeMethod(dependsOnMethods = "deleteOutDatedAllureReport")
+    @BeforeMethod
     public static void setUpDriver() {
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
@@ -29,13 +29,13 @@ public class TestBase extends AbstractTestNGCucumberTests {
         webDriver.quit();
     }
 
-    @AfterSuite
+    @BeforeSuite
     public void deleteOutDatedAllureReport() throws IOException {
         CMD.executeCommandLine("rmdir /Q /S allure-results");
     }
 
     @AfterSuite
     public void generateAllureReport() throws IOException {
-//        CMD.executeCommandLine("allure serve allure-results");
+        CMD.executeCommandLine("allure serve allure-results");
     }
 }
