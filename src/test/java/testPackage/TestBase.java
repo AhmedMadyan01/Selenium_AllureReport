@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.io.IOException;
+
 public class TestBase extends AbstractTestNGCucumberTests {
     private static WebDriver webDriver;
 
@@ -21,8 +23,7 @@ public class TestBase extends AbstractTestNGCucumberTests {
     }
 
     @AfterMethod
-    public static void tearDownDriver() {
+    public static void tearDownDriver() throws IOException {
         webDriver.quit();
     }
-
 }
