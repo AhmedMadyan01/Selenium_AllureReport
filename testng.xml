@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" name="Selenium_AllureReport">
         <classes>
-            <class name="testRunner.TestRunner"/>
+            <class name="test_runner.TestRunner"/>
         </classes>
     </test>
 </suite>
