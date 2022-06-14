@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.madyan</groupId>
-    <artifactId>selenium-allure-report</artifactId>
+    <artifactId>selenium-cucumber-allure-report</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Selenium cucumber allure report</description>
