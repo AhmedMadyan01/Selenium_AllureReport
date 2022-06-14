@@ -7,6 +7,9 @@
     <groupId>org.madyan</groupId>
     <artifactId>selenium-allure-report</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Selenium cucumber allure report</description>
+    <url>https://github.com/ahmed-madyan/selenium-cucumber-allure-report</url>
 
     <properties>
         <!-- Maven project build configurations -->
