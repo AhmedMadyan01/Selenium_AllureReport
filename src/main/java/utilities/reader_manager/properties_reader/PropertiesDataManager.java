@@ -1,5 +1,7 @@
 package utilities.reader_manager.properties_reader;
 
+import utilities.exception_handling.ExceptionHandling;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -14,9 +16,8 @@ public class PropertiesDataManager {
         try {
             InputStream fileInputStream = new FileInputStream((PROJECT_PATH + filePathContentRoot));
             properties.load(fileInputStream);
-        } catch (Exception e) {
-            System.out.println(e.getMessage() + "\n" + e.getMessage() + "\n");
-            e.printStackTrace();
+        } catch (Exception exception) {
+            ExceptionHandling.handleException(exception);
         }
         return properties;
     }
@@ -30,9 +31,8 @@ public class PropertiesDataManager {
             OutputStream fileOutputStream = new FileOutputStream((PROJECT_PATH + filePathContentRoot));
             properties.put(key, value.trim());
             properties.store(fileOutputStream, null);
-        } catch (Exception e) {
-            System.out.println(e.getMessage() + "\n" + e.getMessage() + "\n");
-            e.printStackTrace();
+        } catch (Exception exception) {
+            ExceptionHandling.handleException(exception);
         }
     }
 
