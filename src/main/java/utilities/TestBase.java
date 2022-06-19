@@ -9,6 +9,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import utilities.cli.CLI;
+import utilities.exception_handling.ExceptionHandling;
 
 import java.io.IOException;
 
@@ -22,13 +23,22 @@ public class TestBase extends AbstractTestNGCucumberTests {
     }
 
     public static WebDriver getDriver() {
-        assert webDriver != null;
-        return webDriver;
+        try {
+            assert webDriver != null;
+            return webDriver;
+        } catch (Exception exception) {
+            ExceptionHandling.handleException(exception);
+            return null;
+        }
     }
 
     @AfterMethod
     public void tearDownDriver() {
-        webDriver.quit();
+        try {
+            webDriver.quit();
+        } catch (Exception exception) {
+            ExceptionHandling.handleException(exception);
+        }
     }
 
     @BeforeSuite
