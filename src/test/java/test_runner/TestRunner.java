@@ -1,7 +1,7 @@
 package test_runner;
 
 import io.cucumber.testng.CucumberOptions;
-import utilities.TestBase;
+import utilities.test_base.TestBase;
 
 @CucumberOptions
         (
