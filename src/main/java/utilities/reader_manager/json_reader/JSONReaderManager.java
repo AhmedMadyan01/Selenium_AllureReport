@@ -4,6 +4,7 @@ import io.restassured.path.json.JsonPath;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import utilities.exception_handling.ExceptionHandling;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -24,9 +25,8 @@ public class JSONReaderManager {
         if (filePath != null)
             try {
                 reader = new FileReader(filePath);
-            } catch (Exception e) {
-                System.out.println(e.getMessage() + "\n" + e.getMessage() + "\n");
-                e.printStackTrace();
+            } catch (Exception exception) {
+                ExceptionHandling.handleException(exception);
             }
         else System.out.println("Please send the JSON file path");
         return reader;
