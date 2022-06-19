@@ -2,7 +2,7 @@ package page_object_model;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import utilities.TestBase;
+import utilities.test_base.TestBase;
 
 public class GoogleHomePage {
     /**
