@@ -22,6 +22,8 @@
         <surefire.suiteXmlFiles>testng.xml</surefire.suiteXmlFiles>
         <!-- Dependencies versions -->
         <testNG.version>7.6.0</testNG.version>
+        <selenium-java.version>4.2.2</selenium-java.version>
+        <webdrivermanager.version>5.2.0</webdrivermanager.version>
         <rest-assured.version>5.1.1</rest-assured.version>
         <json-path-rest-assured.version>${rest-assured.version}</json-path-rest-assured.version>
         <hamcrest.version>1.3</hamcrest.version>
