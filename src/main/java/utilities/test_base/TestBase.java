@@ -1,4 +1,4 @@
-package utilities;
+package utilities.test_base;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.github.bonigarcia.wdm.WebDriverManager;
