@@ -1,7 +1,6 @@
 package utilities.test_base;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -17,8 +16,7 @@ public class TestBase extends AbstractTestNGCucumberTests {
     private static WebDriver webDriver;
 
     @BeforeMethod
-    public void setUpDriver() {
-        WebDriverManager.chromedriver().setup();
+    public static void setUpDriver() {
         webDriver = new ChromeDriver();
     }
 
